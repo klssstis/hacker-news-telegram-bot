@@ -6,7 +6,7 @@ let request = require('request-promise');
 let TelegramBotToken = process.env.TELEGRAM_BOT_TOKEN;
 let telegramBot = new TelegramBot(TelegramBotToken, { polling: true });
 
-let registeredUsers = [], previousTopStories = [];
+let registeredUsers = [741655528], previousTopStories = [];
 
 function getTopStory(){
     return request('https://hacker-news.firebaseio.com/v0/topstories.json').then(data => 
@@ -31,6 +31,6 @@ setInterval(() => {
 
 telegramBot.onText(/\/start/, msg => {
     registeredUsers.push(msg.from.id);
-    console.log(msg.from.id);
+    //console.log(msg.from.id);
     telegramBot.sendMessage(msg.from.id, 'Thanks, you\'re now registered, you\'ll get a message when the top story changes!');
 });
