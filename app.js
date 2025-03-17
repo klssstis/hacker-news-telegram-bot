@@ -31,5 +31,6 @@ setInterval(() => {
 
 telegramBot.onText(/\/start/, msg => {
     registeredUsers.push(msg.from.id);
+    console.log(msg.from.id);
     telegramBot.sendMessage(msg.from.id, 'Thanks, you\'re now registered, you\'ll get a message when the top story changes!');
 });
