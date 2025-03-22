@@ -1,4 +1,9 @@
-# Hacker News Telegram Bot
+# Telegram bot has been tested, but it is against github rules.
+
+## so actions are disabled in this repository
+
+
+Hacker News Telegram Bot
 A Hacker News bot for Telegram
 
 
